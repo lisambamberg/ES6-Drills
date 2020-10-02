@@ -35,13 +35,34 @@ getFirstName = str => {
 getFirstName("Lisa Bamberg");
 
 // //6.
-getFirstNameConcise = str => {
-    words = str.split(' ');
-    console.log(words[0])
-}
-getFirstNameConcise();
+getFirstNameConcise = (fullName) => {console.log(fullName.split(' ')[0])};
+getFirstNameConcise("Lisa Mae Bamberg");
 
 //10.
-let doMath = (x, y) => console.log(`exponent result: ${x ^ y} product result: ${x + y}`)
+let doMath = (x, y) => console.log(`exponent result: ${x ** y} product result: ${x * y}`)
 doMath(1, 2);
 
+
+// //Spread Syntax
+// //1.
+let arr = ["Lisa", "Birmingham", "ice cream"];
+
+let myFunc = (name, location, favFood) => {
+    console.log(`name: ${name} location: ${location} favFoods: ${favFood}`)
+}
+
+myFunc(...arr);
+
+//4.
+let myName = "Lisa";
+
+let myFunc2 = (str) => {
+    let spreaded = [...str]
+    console.log(spreaded);
+
+    //7.
+    for (let i = 0; i < spreaded.length; i++) {
+        console.log(spreaded[i])
+    };
+}
+myFunc2(myName)
